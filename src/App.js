@@ -16,6 +16,9 @@ class App extends Component {
           <li>
             <NavLink to="/github">GitHub</NavLink>
           </li>
+          <li>
+            <NavLink></NavLink>
+          </li>  
         </ul>  
 
         <Switch>
@@ -27,7 +30,7 @@ class App extends Component {
     />
         </Switch>  
       </div>
-    );
+    )
   }
 }
 

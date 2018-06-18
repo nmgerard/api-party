@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './Github.css'
+import {Route} from 'react-router-dom'
+import GithubUser from './GithubUser'
 
 class Github extends Component {
     state = {
@@ -8,6 +10,11 @@ class Github extends Component {
     handleChange = (ev) => {
         this.setState({ username: ev.target.value })
     }
+
+    handleSubmit = (ev) => {
+        ev.preventDefault()
+        this.props.history.push(`/github/${this.state.username}`)
+      }
 
     render() {
         return (
@@ -18,7 +25,7 @@ class Github extends Component {
                     className="logo"
                 />
 
-                <form>
+                <form onSubmit ={this.handleSubmit}>
                     <div>
                         <input
                             type="text"
@@ -33,6 +40,7 @@ class Github extends Component {
             </button>
                     </div>
                 </form>
+                <Route path="/github/:username" component={GithubUser} />
             </div>
         )
     }
