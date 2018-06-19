@@ -44,8 +44,8 @@ class PokeUser extends Component {
 }
 
 const styles = {
-    color: "rgb(89, 55, 213)",
-    backgroundColor: "rgb(255, 200, 0)",
+    color: "red",
+    backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6JJsLpcy24GKXZXe2DAPIgGEsG2iFksYQNvykVTU7SjCYMshhlA)',
 }
 
 export default PokeUser
