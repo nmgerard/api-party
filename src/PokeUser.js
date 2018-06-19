@@ -28,7 +28,7 @@ class PokeUser extends Component {
     const { poke } = this.state
     console.log(poke)
     return (
-      <div className="PokeUser">
+      <div className="PokeUser" style={styles}>
         {/* <img src={poke.sprites[back_default]} alt="" /> */}
         <h2>
            Species Name: {poke.name} 
@@ -41,6 +41,11 @@ class PokeUser extends Component {
       </div>
     )
   }
+}
+
+const styles = {
+    color: "rgb(89, 55, 213)",
+    backgroundColor: "rgb(255, 200, 0)",
 }
 
 export default PokeUser

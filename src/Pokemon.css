@@ -2,6 +2,10 @@
     width: 80%;
     margin: 0 auto;
   }
+  body{
+         background-image: url(`https://www.desktopbackground.org/p/2010/04/23/6699_edited-wallpapers-pokemon-backgrounds_1680x1050_h.jpg);
+ 
+  }
   
   .Pokemon .logo {
     width: 100%;
