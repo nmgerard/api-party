@@ -5,37 +5,39 @@ class PokeUser extends Component {
     super(props)
 
     this.state = {
-      user: {}
+      poke: {}
     }
 
     this.fetchUserData()
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.match.params.username !== this.props.match.params.username) {
+    if (prevProps.match.params.pokeName !== this.props.match.params.pokeName) {
       this.fetchUserData()
     }
   }
 
   fetchUserData = () => {
     const { params } = this.props.match
-    fetch(`https://pokeapi.co/api/v2/pokemon-form/${params.username}/`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${params.pokeName}`)
       .then(response => response.json())
-      .then(user => this.setState({ user }))
+      .then(poke => this.setState({ poke }))
   }
 
   render() {
-    const { user } = this.state
-
+    const { poke } = this.state
+    console.log(poke)
     return (
       <div className="PokeUser">
-        <img src={user.url} alt="" />
+        {/* <img src={poke.sprites[back_default]} alt="" /> */}
         <h2>
-          <a href={user.html_url} target="_blank">
-            {user.stats} ({user.abilities})
-          </a>
+           Species Name: {poke.name} 
+
+             {/* ({poke.sprites}) */}   
         </h2>
-        <h3>{user.forms}</h3>
+        <h3>Weight: {poke.weight}00 g</h3>
+        <h3>Height: {poke.height}0 cm</h3>
+        <h3>Base Experience: {poke.base_experience}</h3>
       </div>
     )
   }

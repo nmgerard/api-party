@@ -6,16 +6,16 @@ import PokeUser from './PokeUser'
 
 class Pokemon extends Component {
   state = {
-    username: '',
+    pokeName: '',
   }
 
   handleChange = (ev) => {
-    this.setState({ username: ev.target.value })
+    this.setState({ pokeName: ev.target.value })
   }
 
   handleSubmit = (ev) => {
     ev.preventDefault()
-    this.props.history.push(`/pokemon/${this.state.username}`)
+    this.props.history.push(`/pokemon/${this.state.pokeName}`)
   }
 
   render() {
@@ -32,7 +32,7 @@ class Pokemon extends Component {
             <input
               type="text"
               placeholder="Enter a Pokemon"
-              value={this.state.username}
+              value={this.state.pokeName}
               onChange={this.handleChange}
             />
           </div>
@@ -43,7 +43,7 @@ class Pokemon extends Component {
           </div>
         </form>
 
-        <Route path="/pokemon/:username" component={PokeUser} />
+        <Route path="/pokemon/:pokeName" component={PokeUser} />
       </div>
     )
   }
