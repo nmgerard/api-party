@@ -30,13 +30,11 @@ class PokeUser extends Component {
     const { poke } = this.state
     console.log(poke)
     return (
-      <div className="PokeUser">
+      <div className="Pokemon">
         <img src={this.state.poke.sprites.front_default} alt="" style={styles.img}/>
         <div style={styles.main}>
         <h2>
-           Species Name: {poke.name} 
-
-             {/* ({poke.sprites}) */}   
+           Species Name: {poke.name}  
         </h2>
         <h3>Weight: {poke.weight}00 g</h3>
         <h3>Height: {poke.height}0 cm</h3>
@@ -49,11 +47,15 @@ class PokeUser extends Component {
 
 const styles = {
   main:{
-    color: "red",
-    backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6JJsLpcy24GKXZXe2DAPIgGEsG2iFksYQNvykVTU7SjCYMshhlA)',
+    color: "black",
+    //backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6JJsLpcy24GKXZXe2DAPIgGEsG2iFksYQNvykVTU7SjCYMshhlA)',
+    backgroundColor: 'rgba(250,250,250, 0.4)',
+    boxShadow: '0 1px 1px rgba(250,250,250,.1)',
+    marginTop: '7rem',
+    marginBottom: '2rem',
   },
   img:{
-    backgroundColor: "black",
+    backgroundColor: 'rgba(0, 0, 0, .9)',
     width: "80%",
     maxWidth: "400px",
   },

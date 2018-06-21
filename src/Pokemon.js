@@ -20,7 +20,7 @@ class Pokemon extends Component {
 
   render() {
     return (
-      <div className="Pokemon" style= {styles}>
+      <div className="Pokemon" style={styles}>
         <img
           src="https://res.cloudinary.com/teepublic/image/private/s--1slEw80b--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1515387356/production/designs/2262554_1.jpg"
           alt="Pokemon"
@@ -51,8 +51,6 @@ class Pokemon extends Component {
 
 const styles = {
     backgroundImage: `url(https://www.desktopbackground.org/p/2010/04/23/6699_edited-wallpapers-pokemon-backgrounds_1680x1050_h.jpg)`,
- 
-
 }
 
 export default Pokemon

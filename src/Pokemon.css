@@ -2,7 +2,7 @@
     width: 80%;
     margin: 0 auto;
   }
-  body{
+  .body{
          background-image: url(`https://www.desktopbackground.org/p/2010/04/23/6699_edited-wallpapers-pokemon-backgrounds_1680x1050_h.jpg);
   }
   
@@ -10,6 +10,7 @@
     width: 100%;
     max-width: 500px;
     margin-bottom: 1rem;
+    margin-top: 1rem;
   }
   
   .Pokemon input {
